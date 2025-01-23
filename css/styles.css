@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    /* COLOR PALETTE */
+    --soft-cloud: #F2F5F9;
+    --royal-sapphire: #3662E3;
+    --midnight-shadow: #111729;
+    --steel-horizon: #364153;
+    --sky-mist: #4e80ee33;
+    --serene-blue: #6466E9;
+    --midnight-blue: #111729;
+    --shadow-blue: #20293A;
+    --slate-gray: #4A5567;
+    --cloud-gray: #97A3B6;
+    --pure-white: #FFF;
+
+    /* FONT SIZES */
+    --font-xs: 12px;
+    --font-md: 14px;
+    --font-base: 16px;
+    --font-lg: 20px;
+    --font-xl: 24px;
+}
+
+html {
+    font-family: "Outfit", serif;
+    font-size: var(--font-base);
+    line-height: 1.5;
+}
+
+
+.root-container {
+    background-color: var(--midnight-shadow);
+    background-image: url("../assets/images/bg-illustration.svg");
+    background-size: contain;
+    background-position: top 50% right -150px;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 150px;
+    position: relative;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.header .header__logo {
+    cursor: pointer;
+}
+
+.qr-active {
+    position: absolute;
+    width: 100%;
+    max-width: 1024px;
+    top: 40px;
+    left: 40px;
+}
+
+.generate__wrapper {
+    width: 100%;
+    max-width: 680px;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    border: 2px solid var(--royal-sapphire);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.generate__input {
+    width: 100%;
+    padding: 0.5rem;
+    color: var(--soft-cloud);
+    font-size: var(--font-base);
+}
+
+.generate__input::placeholder {
+    color: var(--steel-horizon);
+    font-weight: 500;
+}
+
+.generate__btn {
+    width: max-content;
+    padding: 1rem 2.5rem;
+    background-color: var(--royal-sapphire);
+    border-radius: 0.75rem;
+    color: var(--soft-cloud);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+/* QR VIEW */
+.view__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.view__wrapper .container {
+    width: 307px;
+    height: 307px;
+    background-color: var(--sky-mist);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .qr__container {
+    background-color: var(--soft-cloud);
+    padding: 1.75rem;
+    border-radius: 2rem;
+}
+
+.view__wrapper .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: var(--royal-sapphire);
+    border-radius: 0.75rem;
+    color: var(--soft-cloud);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.625rem;
+    cursor: pointer;
+    font-size: var(--font-base);
+}
+
+/* HIDEN VIEW */
+.hidden {
+    display: none;
+}
+
+
+/* MODAL */
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--shadow-blue);
+    padding: 2.25rem;
+    border-radius: 0.75rem;
+    border: 2px solid var(--serene-blue);
+}
+
+.modal-content .close {
+    position: absolute;
+    background-color: var(--slate-gray);
+    color: var(--pure-white);
+    font-size: var(--font-lg);
+    width: 30px;
+    height: 30px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 0.75rem;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.modal-content .socialmedia__btns {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.socialmedia__btns button {
+    cursor: pointer;
+    background-color: inherit
+}
+
+/* Error Container */
+.errorContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.errorContainer.hidden {
+    display: none;
+}
+
+.errorContainer .error {
+    width: 100%;
+    border: 2px solid #ff4f4f;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    color: #ff4f4f;
+    font-size: var(--font-md);
+}
+
+@media only screen and (min-width: 1024px) {
+    .root-container {
+        background-size: 35%;
+        background-position: top 50% right 10%;
+    }
+}
