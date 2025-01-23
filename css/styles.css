@@ -35,7 +35,7 @@ html {
     background-size: contain;
     background-position: top 50% right -150px;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    height: 100vh;
     padding-top: 150px;
     position: relative;
 }
