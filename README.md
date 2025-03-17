@@ -13,7 +13,7 @@ QR Code Generator es una aplicación web que permite a los usuarios generar cód
 
 ## Vista Previa
 
-![Captura del Proyecto](./assets/images/desktop-preview.png)
+![Captura del Proyecto](./src/assets/images/desktop-preview.webp)
 
 Puedes ver la versión demo en vivo aquí: [QR Code Generator](https://qr-code-generator-snowy-alpha.vercel.app/)
 
